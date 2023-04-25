@@ -27,7 +27,7 @@ provider:
           # Allow only access to the API's table and its indexes
           Resource:
             - "Fn::GetAtt": [ TasksAPITable, Arn ]
-            - "Fn::Join": ["/", ["Fn::GetAtt": [ TaskAPITable, Arn ], 'index', '*']]
+            - "Fn::Join": ["/", ["Fn::GetAtt": [ TasksAPITable, Arn ], 'index', '*']]
 
 functions:
   API:
