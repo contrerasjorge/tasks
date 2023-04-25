@@ -14,7 +14,7 @@ plugins:
 custom:
   stage: ${opt:stage, self:provider.stage}
   bucketName: ${self:custom.stage}-tasks-api
-  s3sync:
+  s3Sync:
     # A simple configuration for copying static assets
     - bucketName: ${self:custom.bucketName}
       localDir: dist

@@ -2,13 +2,14 @@ import uuid
 from typing import Union
 
 import jwt
-from config import Config
 from fastapi import Depends, FastAPI, Header
 from fastapi.middleware.cors import CORSMiddleware
 from mangum import Mangum
+from starlette import status
+
+from config import Config
 from models import Task
 from schemas import APITask, APITaskList, CloseTask, CreateTask
-from starlette import status
 from store import TaskStore
 
 app = FastAPI()
