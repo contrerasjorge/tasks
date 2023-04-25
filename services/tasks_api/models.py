@@ -11,7 +11,7 @@ class TaskStatus(str, Enum):
 @dataclass
 class Task:
     id: UUID
-    tile: str
+    title: str
     status: TaskStatus
     owner: str
 
